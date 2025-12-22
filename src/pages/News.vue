@@ -10,16 +10,20 @@
     </div>
 
     <div class="filters card">
-      <button class="pill active">全部</button>
-      <button class="pill">政策</button>
-      <button class="pill">行业</button>
-      <button class="pill">技术</button>
-      <button class="pill">活动</button>
+      <button
+        v-for="cat in categories"
+        :key="cat"
+        class="pill"
+        :class="{ active: cat === activeCategory }"
+        @click="setFilter(cat)"
+      >
+        {{ cat }}
+      </button>
     </div>
 
     <div class="grid cols-4 list">
       <ContentCard
-        v-for="it in items"
+        v-for="it in filteredItems"
         :key="it.id"
         tag="资讯"
         :title="it.title"
@@ -32,8 +36,21 @@
 </template>
 
 <script setup>
+import { ref, computed } from "vue";
 import ContentCard from "../components/ContentCard.vue";
 import { news as items } from "../data/mock";
+
+const categories = ["全部", "政策", "行业", "技术", "活动"];
+const activeCategory = ref("全部");
+
+function setFilter(cat) {
+  activeCategory.value = cat;
+}
+
+const filteredItems = computed(() => {
+  if (activeCategory.value === "全部") return items;
+  return items.filter((i) => i.category === activeCategory.value);
+});
 </script>
 
 <style scoped>
@@ -94,5 +111,3 @@ import { news as items } from "../data/mock";
   .img{ width: 100%; height: 180px; }
 }
 </style>
-
-

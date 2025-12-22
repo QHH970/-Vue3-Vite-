@@ -67,56 +67,64 @@ export const news = [
     title: "中央经济工作会议，这些提法意涵深刻！",
     date: "2025-12-02",
     cover: "/images/txw3_2.jpg",
-    url: "https://mp.weixin.qq.com/s/ZuU9y0_M27Ke2fpbGjB_6g"
+    url: "https://mp.weixin.qq.com/s/ZuU9y0_M27Ke2fpbGjB_6g",
+    category: "政策"
   },
   {
     id: "n-002",
     title: "国办最新部署！聚焦数字经济、人工智能等22类场景培育和开放重点领域",
     date: "2025-11-28",
     cover: "/images/txw3_3.jpg",
-    url: "https://mp.weixin.qq.com/s/Bneg-s97mjEjj2PqPvE2Mg"
+    url: "https://mp.weixin.qq.com/s/Bneg-s97mjEjj2PqPvE2Mg",
+    category: "政策"
   },
   {
     id: "n-003",
     title: "2025年第二季度非应邀商业电子信息投诉情况盘点",
     date: "2025-11-17",
     cover: "/images/txw3_4.jpg",
-    url: "https://mp.weixin.qq.com/s/aKqkIcABhEdI9EWrB0XQ8w"
+    url: "https://mp.weixin.qq.com/s/aKqkIcABhEdI9EWrB0XQ8w",
+    category: "行业"
   },
   {
     id: "n-004",
     title: "一图速览！“十五五”规划建议61条",
     date: "2025-11-08",
     cover: "/images/txw3_5.jpg",
-    url: "https://mp.weixin.qq.com/s/YYipFOnOA9ktEu6WDH5s8g"
+    url: "https://mp.weixin.qq.com/s/YYipFOnOA9ktEu6WDH5s8g",
+    category: "政策"
   },
   {
     id: "n-005",
     title: "如何推进重点行业数字化转型？2025年版场景化、图谱化参考指引来了！",
     date: "2025-10-30",
     cover: "/images/txw3_6.jpg",
-    url: "https://mp.weixin.qq.com/s/J71MQaO3k0LY4XVW7ScGzw"
+    url: "https://mp.weixin.qq.com/s/J71MQaO3k0LY4XVW7ScGzw",
+    category: "行业"
   },
   {
     id: "n-006",
     title: "我国人工智能领域快速发展 为高质量发展注入新动能",
     date: "2025-10-12",
     cover: "/images/txw3_7.jpg",
-    url: "https://mp.weixin.qq.com/s/O5lmCc6yhRdkfECnhoBYgg"
+    url: "https://mp.weixin.qq.com/s/O5lmCc6yhRdkfECnhoBYgg",
+    category: "技术"
   },
   {
     id: "n-007",
     title: "3000余个网站和APP完成改造、近6亿人次一键呼入人工客服……",
     date: "2025-09-25",
     cover: "/images/txw3_8.jpg",
-    url: "https://mp.weixin.qq.com/s/PLn62F0DROURG7s_c8DXYA"
+    url: "https://mp.weixin.qq.com/s/PLn62F0DROURG7s_c8DXYA",
+    category: "行业"
   },
   {
     id: "n-008",
     title: "五问+一图，读懂《工业和信息化部科技型企业孵化器管理办法》",
     date: "2025-09-06",
     cover: "/images/txw3_9.jpg",
-    url: "https://mp.weixin.qq.com/s/GNzhTKnGVsKdHiyN40QOMA"
+    url: "https://mp.weixin.qq.com/s/GNzhTKnGVsKdHiyN40QOMA",
+    category: "活动"
   }
 ];
 export const partners = [
@@ -125,5 +133,3 @@ export const partners = [
   { id: "p-3", name: "合作伙伴", logo: "/images/ticon3_3.png" },
   { id: "p-4", name: "合作伙伴", logo: "/images/ticon3_4.png" }
 ];
-
-
