@@ -75,9 +75,14 @@ const year = new Date().getFullYear();
   gap: 12px;
   align-items:center;
 }
-.logo{ width: 42px; height: 42px; }
 .name{ font-weight: 950; letter-spacing: 0.2px; }
 .en{ font-size: 12px; opacity: 0.9; margin-top: 2px; }
+  .logo{
+    width: 110px; /* 根据 logo 原图尺寸做适当放大以提高清晰度 */
+    height: auto;
+    max-width: none; /* 覆盖全局 img { max-width: 100% } 限制 */
+    object-fit: contain;
+  }
 .desc{
   margin: 12px 0 0;
   opacity: 0.92;

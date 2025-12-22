@@ -19,93 +19,106 @@ export const heroSlides = [
 export const dynamics = [
   {
     id: "d-001",
-    title: "协会召开行业交流座谈会，聚焦产业协同",
+    title: "中国互联网协会发布“2025年互联网企业信用等级评价”A级以上单位名单",
     date: "2025-11-20",
-    cover: "/images/t3_6.jpg"
+    cover: "/images/t3_6.jpg",
+    url: "https://www.isc.org.cn/article/27346405425672192.html"
   },
   {
     id: "d-002",
-    title: "走进企业：太空市互联网企业创新成果调研",
+    title: "2025中国互联网大会丨《中国互联网发展报告（2025）》正式发布",
     date: "2025-11-05",
-    cover: "/images/t3_7.jpg"
+    cover: "/images/t3_7.jpg",
+    url: "https://www.isc.org.cn/article/25680490231623680.html"
   },
   {
     id: "d-003",
-    title: "专家讲座：AIGC 与产业应用实践分享",
+    title: "数字扬帆丨“菁才计划”IETF国际互联网标准青年学者推进项目启动",
     date: "2025-10-18",
-    cover: "/images/t3_8.jpg"
+    cover: "/images/t3_8.jpg", 
+    url: "https://www.isc.org.cn/article/27267622264893440.html"
   },
   {
     id: "d-004",
-    title: "会员单位走访：共建互联生态合作网络",
+    title: "2025全球数据技术大会在京开幕 共筑智能时代的新型数据基础设施",
     date: "2025-10-02",
-    cover: "/images/t3_4.jpg"
+    cover: "/images/t3_4.jpg", 
+    url: "https://www.isc.org.cn/article/27334675739832320.html"
   },
   {
     id: "d-005",
-    title: "协会发布年度报告：行业发展趋势与建议",
+    title: "2025（第二届）集团企业数智化技术创新与生态大会在京召开",
     date: "2025-09-15",
-    cover: "/images/t3_5.jpg"
+    cover: "/images/t3_5.jpg",
+    url: "https://www.isc.org.cn/article/27347042541760512.html"
   },
   {
     id: "d-006",
-    title: "数字化转型专题培训圆满举办",
+    title: "2025金灵光杯丨AI赋能宠物陪伴，GPTBots打造宠物情感互动新模式",
     date: "2025-08-29",
-    cover: "/images/tf3_2.jpg"
+    cover: "/images/tf3_2.jpg",
+    url: "https://www.isc.org.cn/article/27301601318793216.html"
   }
 ];
 
 export const news = [
   {
     id: "n-001",
-    title: "共享云计算：提升企业算力与效率",
+    title: "中央经济工作会议，这些提法意涵深刻！",
     date: "2025-12-02",
-    cover: "/images/txw3_2.jpg"
+    cover: "/images/txw3_2.jpg",
+    url: "https://mp.weixin.qq.com/s/ZuU9y0_M27Ke2fpbGjB_6g"
   },
   {
     id: "n-002",
-    title: "智慧城市：让城市更聪明一点",
+    title: "国办最新部署！聚焦数字经济、人工智能等22类场景培育和开放重点领域",
     date: "2025-11-28",
-    cover: "/images/txw3_3.jpg"
+    cover: "/images/txw3_3.jpg",
+    url: "https://mp.weixin.qq.com/s/Bneg-s97mjEjj2PqPvE2Mg"
   },
   {
     id: "n-003",
-    title: "产业互联网：加速产业链协同创新",
+    title: "2025年第二季度非应邀商业电子信息投诉情况盘点",
     date: "2025-11-17",
-    cover: "/images/txw3_4.jpg"
+    cover: "/images/txw3_4.jpg",
+    url: "https://mp.weixin.qq.com/s/aKqkIcABhEdI9EWrB0XQ8w"
   },
   {
     id: "n-004",
-    title: "网络安全：企业合规与实战防护建议",
+    title: "一图速览！“十五五”规划建议61条",
     date: "2025-11-08",
-    cover: "/images/txw3_5.jpg"
+    cover: "/images/txw3_5.jpg",
+    url: "https://mp.weixin.qq.com/s/YYipFOnOA9ktEu6WDH5s8g"
   },
   {
     id: "n-005",
-    title: "AI 赋能：从工具到生产力的跃迁",
+    title: "如何推进重点行业数字化转型？2025年版场景化、图谱化参考指引来了！",
     date: "2025-10-30",
-    cover: "/images/txw3_6.jpg"
+    cover: "/images/txw3_6.jpg",
+    url: "https://mp.weixin.qq.com/s/J71MQaO3k0LY4XVW7ScGzw"
   },
   {
     id: "n-006",
-    title: "绿色低碳：数字技术助力可持续发展",
+    title: "我国人工智能领域快速发展 为高质量发展注入新动能",
     date: "2025-10-12",
-    cover: "/images/txw3_7.jpg"
+    cover: "/images/txw3_7.jpg",
+    url: "https://mp.weixin.qq.com/s/O5lmCc6yhRdkfECnhoBYgg"
   },
   {
     id: "n-007",
-    title: "工业互联网：新型基础设施的核心支撑",
+    title: "3000余个网站和APP完成改造、近6亿人次一键呼入人工客服……",
     date: "2025-09-25",
-    cover: "/images/txw3_8.jpg"
+    cover: "/images/txw3_8.jpg",
+    url: "https://mp.weixin.qq.com/s/PLn62F0DROURG7s_c8DXYA"
   },
   {
     id: "n-008",
-    title: "数据要素：合规流通与价值释放路径",
+    title: "五问+一图，读懂《工业和信息化部科技型企业孵化器管理办法》",
     date: "2025-09-06",
-    cover: "/images/txw3_1.png"
+    cover: "/images/txw3_9.jpg",
+    url: "https://mp.weixin.qq.com/s/GNzhTKnGVsKdHiyN40QOMA"
   }
 ];
-
 export const partners = [
   { id: "p-1", name: "WACET", logo: "/images/ticon3_1.png" },
   { id: "p-2", name: "合作伙伴", logo: "/images/ticon3_2.png" },

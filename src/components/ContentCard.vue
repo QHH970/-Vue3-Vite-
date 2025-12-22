@@ -7,7 +7,11 @@
         <span class="date">{{ date }}</span>
       </div>
       <h3 class="title" :title="title">{{ title }}</h3>
-      <div class="more">
+      <a v-if="url" :href="url" class="more" target="_blank" rel="noopener noreferrer">
+        <span>查看详情</span>
+        <span class="arrow">→</span>
+      </a>
+      <div v-else class="more">
         <span>查看详情</span>
         <span class="arrow">→</span>
       </div>
@@ -21,6 +25,7 @@ defineProps({
   date: { type: String, default: "" },
   cover: { type: String, default: "" },
   tag: { type: String, default: "资讯" }
+  , url: { type: String, default: "" }
 });
 </script>
 

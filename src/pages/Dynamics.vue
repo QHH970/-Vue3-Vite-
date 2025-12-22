@@ -17,6 +17,7 @@
         :title="it.title"
         :date="it.date"
         :cover="it.cover"
+        :url="it.url"
       />
     </div>
   </div>

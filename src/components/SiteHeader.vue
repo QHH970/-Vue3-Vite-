@@ -64,10 +64,16 @@ watch(
   min-width: 260px;
 }
 .logo{
-  width: 38px;
-  height: 38px;
+  width: 220px; /* 根据 logo 原图尺寸做适当放大以提高清晰度 */
+  height: 64px; /* 提升高度以提高在 header 中的清晰度 */
+  max-width: none; /* 覆盖全局 img max-width */
+  object-fit: contain;
 }
-.name{ font-weight: 900; letter-spacing: 0.2px; }
+.name{ 
+  font-size: 20px;
+  font-weight: 900; 
+  letter-spacing: 0.2px; 
+}
 .en{ font-size: 12px; color: var(--muted); margin-top: 2px; }
 
 .nav{
