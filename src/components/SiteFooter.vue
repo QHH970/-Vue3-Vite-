@@ -25,9 +25,9 @@
 
         <div class="col">
           <div class="h">联系我们</div>
-          <div class="t">电话：028-88888888</div>
-          <div class="t">邮箱：info@taikong-isa.org</div>
-          <div class="t">地址：太空市高新区创新大道 88 号</div>
+          <div class="t">电话：18298321181</div>
+          <div class="t">邮箱：1371045387@qq.com</div>
+          <div class="t">地址：甘肃省兰州市营门村一号学生九号公寓409</div>
         </div>
 
         <div class="col">
@@ -89,9 +89,16 @@ const year = new Date().getFullYear();
   line-height: 1.8;
   max-width: 420px;
 }
+.col{ 
+  margin: 20px auto
+}
+.h{
+
+}
 .col .h{
   font-weight: 950;
   margin-bottom: 10px;
+
 }
 .a{
   display:block;

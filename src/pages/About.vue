@@ -8,7 +8,7 @@
           太空市互联网协会致力于搭建行业交流平台，服务会员与社会，推动互联网产业高质量发展。
         </p>
       </div>
-      <img class="img" src="/images/t3_2.png" alt="关于协会" />
+      <img class="img" src="/images/t3_2.jpg" alt="关于协会" />
     </div>
 
     <div class="grid cols-3 blocks">

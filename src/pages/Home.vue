@@ -4,26 +4,26 @@
 
     <section class="container quick">
       <div class="grid cols-4">
-        <div class="card q">
+        <a class="card q" href="/association-charter.pdf" download>
           <div class="ic">📚</div>
           <div class="t">协会章程</div>
           <div class="d">制度与文件下载</div>
-        </div>
-        <div class="card q">
+        </a>
+        <router-link to="/join" class="card q">
           <div class="ic">🧾</div>
           <div class="t">申请入会</div>
           <div class="d">在线提交申请材料</div>
-        </div>
-        <div class="card q">
+        </router-link>
+        <router-link  to="/Organization" class="card q">
           <div class="ic">🏢</div>
           <div class="t">组织架构</div>
           <div class="d">理事会与委员会</div>
-        </div>
-        <div class="card q">
+        </router-link>
+        <router-link to="/contact" class="card q">
           <div class="ic">💬</div>
           <div class="t">联系我们</div>
           <div class="d">电话/邮箱/地址</div>
-        </div>
+        </router-link>
       </div>
     </section>
 
@@ -80,7 +80,7 @@ import { heroSlides, dynamics, news, partners } from "../data/mock";
 
 <style scoped>
 .quick{
-  margin-top: -26px;
+  margin-top: 26px;
   position: relative;
   z-index: 2;
 }

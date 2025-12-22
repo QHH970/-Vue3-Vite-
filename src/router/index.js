@@ -5,13 +5,19 @@ import News from "../pages/News.vue";
 import Dynamics from "../pages/Dynamics.vue";
 import About from "../pages/About.vue";
 import Member from "../pages/Member.vue";
+import Join from "../pages/Join.vue";
+import Organization from "../pages/Organization.vue";
+import Contact from "../pages/Contact.vue";
 
-//配置路由规则
+//配置路由规则o
 const routes = [
   { path: "/", name: "home", component: Home },//默认路由，访问到根路径时，显示Home页面
   { path: "/dynamics", name: "dynamics", component: Dynamics },
   { path: "/news", name: "news", component: News },
   { path: "/member", name: "member", component: Member },
+  { path: "/join", name: "join", component: Join },
+  { path: "/Organization", name: "organization", component: Organization },
+  { path: "/Contact", name: "contact", component: Contact },
   { path: "/about", name: "about", component: About }
 ];
 // 2.创建路由器
