@@ -6,7 +6,7 @@
         <h2>最新活动与通知</h2>
         <p>展示协会近期活动、会议与走访内容（演示数据，可后续对接后端）。</p>
       </div>
-      <img class="img" src="/images/t3_3.jpg" alt="协会动态" />
+      <img class="img" src="/images/t3_4.jpg" alt="协会动态" />
     </div>
 
     <div class="grid cols-3 list">

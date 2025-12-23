@@ -1,27 +1,43 @@
 <template>
   <div class="container page">
     <div class="grid cols-3">
-      <div class="card login">
-        <div class="chip">会员中心</div>
-        <h2>登录</h2>
-        <p class="muted">演示页面：可后续对接真实账号体系。</p>
+            <div class="card login">
+              <div class="chip">会员中心</div>
+              <h2>登录</h2>
 
-        <label class="label">账号</label>
-        <input class="input" placeholder="请输入账号" />
+              <label class="label">账号</label>
+              <input v-model="username" class="input" placeholder="请输入账号" />
 
-        <label class="label">密码</label>
-        <input class="input" type="password" placeholder="请输入密码" />
+              <label class="label">密码</label>
+              <input v-model="password" class="input" type="password" placeholder="请输入密码" />
 
-        <button class="btn full" type="button">登录</button>
-        <div class="tip">提示：本页仅用于课程设计演示。</div>
-      </div>
+              <button v-if="!loginSuccess" @click="gotoLogin" class="btn full" type="button">登录</button>
+
+              <div v-if="!loginSuccess && msg" class="tip">{{ msg }}</div>
+
+              <div v-else-if="loginSuccess">
+                <el-row>
+                  <el-col :sm="24" :lg="12" :xl="8">
+                    <el-result
+                      icon="success"
+                      title="登录成功"
+                      :sub-title="`欢迎，${username}`"
+                    >
+                      <template #extra>
+                        <el-button type="primary" @click="onBack">返回首页</el-button>
+                      </template>
+                    </el-result>
+                  </el-col>
+                </el-row>
+              </div>
+            </div>
 
       <div class="card panel">
         <div class="h">常用入口</div>
         <div class="links">
           <a class="lk" href="javascript:void(0)">会员名录</a>
-          <a class="lk" href="javascript:void(0)">资料下载</a>
-          <a class="lk" href="javascript:void(0)">通知公告</a>
+          <a class="lk" href="/association-charter.pdf" download>资料下载</a>
+          <router-link class="lk" to="/Notice">通知公告</router-link>
           <a class="lk" href="javascript:void(0)">我的申请</a>
         </div>
       </div>
@@ -29,7 +45,7 @@
       <div class="card panel">
         <div class="h">服务说明</div>
         <div class="txt">
-          我们为会员提供活动报名、信息发布、资源对接、培训学习等服务能力。后续可按课程要求补充
+          我们为会员提供活动报名、信息发布、资源对接、培训学习等服务能力。后续可补充
           CRUD 与后台管理。
         </div>
       </div>
@@ -37,7 +53,53 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const username = ref('')
+const password = ref('')
+const msg = ref('')
+// 暂时默认登录为true，测试显示登录成功组件
+const loginSuccess = ref(false)
+
+function gotoLogin(){
+  router.push({ name: 'login', query: { username: username.value } })
+}
+
+async function login(){
+  msg.value = ''
+  try{
+    const res = await fetch('http://localhost:8081/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username: username.value, password: password.value })
+    })
+    const data = await res.json()
+    if (!res.ok) {
+      msg.value = data.msg || '登录失败'
+      return
+    }
+    // 存储 token 和用户信息
+    if (data.token) localStorage.setItem('auth_token', data.token)
+    localStorage.setItem('user', JSON.stringify(data.user || {}))
+    // 显示 Element Plus 登录成功组件
+    loginSuccess.value = true
+  }catch(e){
+    msg.value = '无法连接到后端（请确认 server 已启动）'
+  }
+}
+
+function onBack(){
+  // 重置并跳转回首页
+  username.value = ''
+  password.value = ''
+  msg.value = ''
+  loginSuccess.value = false
+  router.push({ name: 'home' })
+}
+</script>
 
 <style scoped>
 .page{ padding: 18px 0 6px; }
