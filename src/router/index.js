@@ -10,6 +10,7 @@ import Member from "../pages/Member.vue";
 import Join from "../pages/Join.vue";
 import Organization from "../pages/Organization.vue";
 import Contact from "../pages/Contact.vue";
+import Myapplication from "../pages/Myapplication.vue";
 
 //配置路由规则o
 const routes = [
@@ -18,6 +19,7 @@ const routes = [
   { path: "/Login", name: "login", component: Login },
   { path: "/news", name: "news", component: News },
   { path: "/member", name: "member", component: Member },
+  { path: "/myapplication", name: "myapplication", component: Myapplication },
   { path: "/join", name: "join", component: Join },
   { path: "/Notice", name: "notice", component: Notice },
   { path: "/Organization", name: "organization", component: Organization },

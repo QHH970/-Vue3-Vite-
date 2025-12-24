@@ -18,7 +18,7 @@
       </nav>
 
       <div class="actions">
-        <a class="ghost" href="javascript:void(0)" title="模拟搜索">搜索</a>
+        <!-- <a class="ghost" href="javascript:void(0)" title="模拟搜索">搜索</a> -->
         <router-link to="/member" class="btn small">登录</router-link>
         <button class="burger" @click="open = !open" :aria-expanded="open" aria-label="展开菜单">
           <span></span><span></span><span></span>

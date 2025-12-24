@@ -65,3 +65,5 @@ Desktop.ini
 # yarn.lock
 # pnpm-lock.yaml
 
+#由于后端尚未完成，暂忽略
+server-backend

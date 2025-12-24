@@ -31,16 +31,41 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const form = ref({ name: "", organization: "", email: "", phone: "", note: "" });
 const submitted = ref(false);
 
+function saveApplication(data){
+  try{
+    const raw = localStorage.getItem('applications') || '[]'
+    const arr = JSON.parse(raw)
+    arr.unshift(data)
+    localStorage.setItem('applications', JSON.stringify(arr))
+  }catch(e){
+    console.error('saveApplication error', e)
+  }
+}
+
 function onSubmit() {
-  // 演示：本地模拟提交，实际可通过 fetch 提交到后端 API
-  console.log("submit", form.value);
-  submitted.value = true;
-  // 重置表单（保留提示）
-  form.value = { name: "", organization: "", email: "", phone: "", note: "" };
+  // 演示：将表单保存到 localStorage，以供 Myapplication.vue 显示
+  const payload = {
+    title: `入会申请 - ${form.value.name || form.value.organization || '匿名'}`,
+    name: form.value.name,
+    organization: form.value.organization,
+    email: form.value.email,
+    phone: form.value.phone,
+    content: form.value.note,
+    status: '待处理',
+    createdAt: Date.now()
+  }
+  saveApplication(payload)
+  submitted.value = true
+  // 重置表单
+  form.value = { name: "", organization: "", email: "", phone: "", note: "" }
+  // 跳转到我的申请页面以查看提交内容（演示）
+  router.push({ name: 'myapplication' })
 }
 </script>
 

@@ -38,7 +38,7 @@
           <a class="lk" href="javascript:void(0)">会员名录</a>
           <a class="lk" href="/association-charter.pdf" download>资料下载</a>
           <router-link class="lk" to="/Notice">通知公告</router-link>
-          <a class="lk" href="javascript:void(0)">我的申请</a>
+          <router-link class="lk" to="/myapplication">我的申请</router-link>
         </div>
       </div>
 
