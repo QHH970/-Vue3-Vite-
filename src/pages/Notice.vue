@@ -47,9 +47,9 @@ import ContentCard from '../components/ContentCard.vue'
 
 // 使用 public 目录下的本地文件作为公告数据（开发环境）
 const announcements = [
-  { id: 1, title: '关于召开“2026（第十六届）中国互联网产业年会”的通知', date: '2025-12-01', cover: '/images/notice1.jpg', url: '/association-charter.pdf', category: '通知' },
-  { id: 2, title: '关于举办2025算力互联网大会的会议通知', date: '2025-11-27', cover: '/images/notice1.jpg', url: '/association-charter.pdf', category: '活动' },
-  { id: 3, title: '关于召开智创“新”北京暨2025（第二十二届）北京互联网大会的通知', date: '2025-11-20', cover: '/images/notice1.jpg', url: '/association-charter.pdf', category: '系统' }
+  { id: 1, title: '关于召开“2026（第十六届）中国互联网产业年会”的通知', date: '2025-12-01', cover: '/images/notice_title.jpg', url: '/association-charter.pdf', category: '通知' },
+  { id: 2, title: '关于举办2025算力互联网大会的会议通知', date: '2025-11-27', cover: '/images/notice_title.jpg', url: '/association-charter.pdf', category: '活动' },
+  { id: 3, title: '关于召开智创“新”北京暨2025（第二十二届）北京互联网大会的通知', date: '2025-11-20', cover: '/images/notice_title.jpg', url: '/association-charter.pdf', category: '系统' }
 ]
 
 const categories = ['全部', '通知', '活动', '系统']
